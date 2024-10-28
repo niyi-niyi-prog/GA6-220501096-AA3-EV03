@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Cash-Flow-Hogar</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="dashboard">
+        <header class="header">
+            <img src="../images/Logo.png" alt="Logo" class="logo">
+            <h1>Cash-Flow-Hogar</h1>
+            <button class="new-entry-btn" onclick="NuevoRegistro()">Nuevo Registro</button>
+        </header>
+
+        <main class="main-content">
+
+            <section class="chart-section">
+                <div class="pie-chart">
+                    <div class="pie-slice blue"></div>
+                    <div class="pie-slice orange"></div>
+                </div>
+                <div class="bar-chart">
+                    <div class="bar" style="height: 40%; background-color: #FFB6C1;"></div>
+                    <div class="bar" style="height: 60%; background-color: #FFD700;"></div>
+                    <div class="bar" style="height: 80%; background-color: #FFA07A;"></div>
+                    <div class="bar" style="height: 100%; background-color: #FF6347;"></div>
+                </div>
+            </section>
+            <section class="account-status">
+                <h2>Estado de Cuenta</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Mes</th>
+                            <th>Ingreso</th>
+                            <th>Gastos</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Enero</td>
+                            <td>$2,000,000</td>
+                            <td>$1,500,000</td>
+                        </tr>
+                        <tr>
+                            <td>Febrero</td>
+                            <td>$2,500,000</td>
+                            <td>$2,000,000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
+<script src="js/dashboard.js"></script>

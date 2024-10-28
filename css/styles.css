@@ -1,0 +1,288 @@
+:root {
+    --light-0: #f8f9fa;
+    --light-1: #e9ecef;
+    --light-2: #dee2e6;
+    --dark-0: #495057;
+    --dark-1: #343a40;
+    --dark-2: #212529;
+    --transition: all 0.6s ease;
+    --gradient: linear-gradient(45deg, rgba(255,255,255,1), rgba(221,221,221,1), rgba(153,153,153,1));
+    --gradient2: linear-gradient(39deg, rgba(153,153,153,1), rgba(51,51,51,1), rgba(0,0,0,1));
+}
+
+
+
+body {
+    margin: 0;
+    height: 100vh;
+}
+
+
+div[name="body"] {
+    background: #595959;
+    background-image: var(--gradient);
+    background-size: 200%; /* Esto es clave para que el fondo se mueva */
+    display: grid;
+    height: 100vh;
+    margin: 0;
+    place-items: center;
+    animation: sincolor 5s infinite ease;
+}
+
+
+@keyframes sincolor {
+    0% {
+        background-position: left;
+    }
+
+    100% {
+        background-position: right;
+    }
+}
+
+
+
+.select-wrapper input.select-dropdown {
+    background-color: white !important;
+}
+
+
+
+#toggle-button:checked + label {
+    transition: var(--transition);
+    background: var(--dark-0);
+}
+
+input {
+    position: absolute;
+}
+
+label[name="clarooscuro"] {
+    transition: var(--transition);
+    background: var(--light-2);
+    border-radius: 20px;
+    cursor: pointer;
+    height: 32px;
+    position: fixed;
+    width: 61px;
+    top: 1%;
+    left: 1%;
+}
+
+label .sun-moon {
+    background: var(--dark-2);
+    border-radius: 50%;
+    height: 25px;
+    margin: 4px;
+    transition: transform 0.3s ease;
+    width: 26px;
+}
+
+#toggle-button:checked + label .sun-moon {
+    background: var(--light-0);
+    transform: translateX(30px);
+}
+
+
+.type-logo {
+    width: 300px;
+    height: 200px;
+    margin-left: initial;
+    margin-right: initial;
+    background: url('../images/Logo.png') no-repeat center;
+    background-size: 100% 100%;
+
+}
+
+
+
+.content-logoOrange {
+    position: fixed;
+    left: 3%;
+    top: 87%;
+
+}
+
+
+
+div[name="content-logo"] {
+    position: fixed;
+    left: 15%;
+}
+
+
+
+
+h1[name="titleimg"] {
+    transition: color 0.6s ease-in-out;
+    top: 10%;
+    font-family: Arial;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 5px;
+}
+
+
+
+
+hr {
+    margin-block-end: -1em;
+    background-color: #000;
+    color: #000;
+    height: 1px;
+}
+
+
+label[name="nombreE"] {
+    transition: color 0.6s ease-in-out;
+    font-family: Arial;
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 7px;
+    position: relative;
+    top: -16px;
+    left: 50px;
+}
+
+
+
+#imagenced {
+    width: 200px;
+    height: 200px;
+    border-radius: 150px;
+    background: url('../images/User.png') no-repeat center;
+}
+
+.imagenColaborador {
+    height: 200px;
+    width: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border-radius: 150px;
+    position: relative;
+    margin: -9px auto 20px auto;
+    left: 0;
+    right: 0;
+    border-width: 3px;
+    border-style: outset;
+    border-color: #ccc;
+    background-size: contain;
+}
+.animate-vueltacard {
+    animation-name: vueltacard;
+    animation-duration: 1s;
+    animation-iteration-count: initial;
+}
+
+@keyframes vueltacard {
+
+
+    0% {
+        bottom: 200px;
+    }
+
+    100% {
+        bottom: 127px;
+    }
+}
+
+
+
+
+.card {
+    position: relative;
+    left: 20%;
+    right: 0;
+    bottom: 127px;
+
+}
+
+
+
+input[name="UserName"] {
+    font-family: Arial;
+    font-size: 18px;
+    text-align: justify;
+    padding: 15px 15px 15px 35px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[name="PassWord"] {
+    font-family: Arial;
+    font-size: 18px;
+    top: 115%;
+    text-align: justify;
+    padding: 15px 15px 15px 35px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.input-wrapper {
+    position: relative;
+    width: 250px;
+}
+
+.input-wrapperP {
+    position: relative;
+    width: 250px;
+    top: 45px;
+}
+
+
+.input-icon {
+    left: 2%;
+    color: #191919;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 27px;
+    transform: translateY(-50%);
+}
+
+.input-field {
+    padding-left: 40px; /* Asegúrate de que haya espacio suficiente para el icono */
+}
+
+
+.loginBtn {
+    position: absolute;
+    width: 100% !important;
+    height: 20% !important;
+    background-color: #ff7900;
+    border-width: 0;
+    color: #fff;
+    top: 150%;
+    font-family: Arial;
+    font-size: 18px;
+}
+
+    .loginBtn:hover {
+        background-color: #f16e00;
+        transform: scale(1.023);
+        transition: transform 0.6s;
+    }
+
+
+a[name="ayuda"] {
+    position: relative;
+    top: 237px;
+    left: 1px;
+    font-family: Arial;
+    font-size: 12px;
+}
+
+a[name="Registro"] {
+    position: relative;
+    top: 220px;
+    left: 200px;
+    font-family: Arial;
+    font-size: 12px;
+}
+
+.msg_login {
+    top: 80px !important;
+    left: 0% !important;
+    font-size: 13px !important;
+}
